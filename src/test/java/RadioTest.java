@@ -99,10 +99,6 @@ public class RadioTest {
     }
 
 
-
-
-
-
     @Test
     public void shouldDownValidVolume() {
         Radio volume = new Radio();
@@ -232,9 +228,6 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
-
-
-
 
 
     @Test
