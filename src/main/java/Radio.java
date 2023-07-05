@@ -1,4 +1,9 @@
 public class Radio {
+
+    public Radio () {
+        
+    }
+
     private int currentRadioStation;
 
     private int currentVolume;
