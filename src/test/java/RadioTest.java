@@ -107,7 +107,7 @@ public class RadioTest {
     public void shouldDownValidVolume() {
         Radio volume = new Radio();
 
-        volume.currentVolume = 50;
+        volume.setCurrentVolume(50);
         volume.downVolume();
 
         int expected = 49;
@@ -120,7 +120,7 @@ public class RadioTest {
     public void shouldIncreaseValidVolume() {
         Radio volume = new Radio();
 
-        volume.currentVolume = 50;
+        volume.setCurrentVolume(50);
         volume.increaseVolume();
 
         int expected = 51;
@@ -133,7 +133,7 @@ public class RadioTest {
     public void shouldDownMaxLimitVolume() {
         Radio volume = new Radio();
 
-        volume.currentVolume = 100;
+        volume.setCurrentVolume(100);
         volume.downVolume();
 
         int expected = 99;
@@ -146,7 +146,7 @@ public class RadioTest {
     public void shouldIncreaseMaxLimitVolume() {
         Radio volume = new Radio();
 
-        volume.currentVolume = 100;
+        volume.setCurrentVolume(100);
         volume.increaseVolume();
 
         int expected = 100;
@@ -159,7 +159,7 @@ public class RadioTest {
     public void shouldDownMinLimitVolume() {
         Radio volume = new Radio();
 
-        volume.currentVolume = 0;
+        volume.setCurrentVolume(0);
         volume.downVolume();
 
         int expected = 0;
@@ -172,7 +172,7 @@ public class RadioTest {
     public void shouldIncreaseMinLimitVolume() {
         Radio volume = new Radio();
 
-        volume.currentVolume = 0;
+        volume.setCurrentVolume(0);
         volume.increaseVolume();
 
         int expected = 1;
@@ -185,7 +185,7 @@ public class RadioTest {
     public void shouldDownBeforeMaxLimitVolume() {
         Radio volume = new Radio();
 
-        volume.currentVolume = 99;
+        volume.setCurrentVolume(99);
         volume.downVolume();
 
         int expected = 98;
@@ -198,7 +198,7 @@ public class RadioTest {
     public void shouldIncreaseBeforeMaxLimitVolume() {
         Radio volume = new Radio();
 
-        volume.currentVolume = 99;
+        volume.setCurrentVolume(99);
         volume.increaseVolume();
 
         int expected = 100;
@@ -211,7 +211,7 @@ public class RadioTest {
     public void shouldDownAboveMinLimitVolume() {
         Radio volume = new Radio();
 
-        volume.currentVolume = 1;
+        volume.setCurrentVolume(1);
         volume.downVolume();
 
         int expected = 0;
@@ -224,7 +224,7 @@ public class RadioTest {
     public void shouldIncreaseAboveMinLimitVolume() {
         Radio volume = new Radio();
 
-        volume.currentVolume = 1;
+        volume.setCurrentVolume(1);
         volume.increaseVolume();
 
         int expected = 2;
@@ -241,7 +241,7 @@ public class RadioTest {
     public void shouldSetNextRadioStation() {
         Radio radio = new Radio();
 
-        radio.currentRadioStation = 4;
+        radio.setCurrentRadioStation(4);
         radio.nextRadioStation();
 
         int expected = 5;
@@ -254,7 +254,7 @@ public class RadioTest {
     public void shouldSetPrevRadioStation() {
         Radio radio = new Radio();
 
-        radio.currentRadioStation = 4;
+        radio.setCurrentRadioStation(4);
         radio.prevRadioStation();
 
         int expected = 3;
@@ -267,7 +267,7 @@ public class RadioTest {
     public void shouldSetNextMaxLimitRadioStation() {
         Radio radio = new Radio();
 
-        radio.currentRadioStation = 9;
+        radio.setCurrentRadioStation(9);
         radio.nextRadioStation();
 
         int expected = 0;
@@ -280,7 +280,7 @@ public class RadioTest {
     public void shouldSetPrevMaxLimitRadioStation() {
         Radio radio = new Radio();
 
-        radio.currentRadioStation = 9;
+        radio.setCurrentRadioStation(9);
         radio.prevRadioStation();
 
         int expected = 8;
@@ -293,7 +293,7 @@ public class RadioTest {
     public void shouldSetNextMinLimitRadioStation() {
         Radio radio = new Radio();
 
-        radio.currentRadioStation = 0;
+        radio.setCurrentRadioStation(0);
         radio.nextRadioStation();
 
         int expected = 1;
@@ -306,7 +306,7 @@ public class RadioTest {
     public void shouldSetPrevMinLimitRadioStation() {
         Radio radio = new Radio();
 
-        radio.currentRadioStation = 0;
+        radio.setCurrentRadioStation(0);
         radio.prevRadioStation();
 
         int expected = 9;
@@ -319,7 +319,7 @@ public class RadioTest {
     public void shouldSetNextBeforeMaxLimitRadioStation() {
         Radio radio = new Radio();
 
-        radio.currentRadioStation = 8;
+        radio.setCurrentRadioStation(8);
         radio.nextRadioStation();
 
         int expected = 9;
@@ -332,7 +332,7 @@ public class RadioTest {
     public void shouldSetPrevBeforeMaxLimitRadioStation() {
         Radio radio = new Radio();
 
-        radio.currentRadioStation = 8;
+        radio.setCurrentRadioStation(8);
         radio.prevRadioStation();
 
         int expected = 7;
@@ -345,7 +345,7 @@ public class RadioTest {
     public void shouldSetNextAboveMinLimitRadioStation() {
         Radio radio = new Radio();
 
-        radio.currentRadioStation = 1;
+        radio.setCurrentRadioStation(1);
         radio.nextRadioStation();
 
         int expected = 2;
@@ -358,7 +358,7 @@ public class RadioTest {
     public void shouldSetPrevAboveMinLimitRadioStation() {
         Radio radio = new Radio();
 
-        radio.currentRadioStation = 1;
+        radio.setCurrentRadioStation(1);
         radio.prevRadioStation();
 
         int expected = 0;
